@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S5i-2B-ZR3">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -22,20 +22,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="Svd-6D-2du">
-                                <rect key="frame" x="147" y="137" width="120" height="126"/>
+                                <rect key="frame" x="147" y="181" width="120" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="jWn-tz-KuR"/>
                                     <constraint firstAttribute="width" constant="120" id="mF0-39-Oa1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Bus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-x1-17R">
-                                <rect key="frame" x="109" y="313" width="196" height="71.333333333333314"/>
+                                <rect key="frame" x="109" y="357" width="196" height="71.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="60"/>
                                 <color key="textColor" red="0.9137254901960784" green="0.70588235294117641" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LG-r3-ppt">
-                                <rect key="frame" x="118" y="504.33333333333326" width="178" height="49"/>
+                                <rect key="frame" x="118" y="548.33333333333337" width="178" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="7kf-sZ-AwK"/>
                                     <constraint firstAttribute="height" constant="49" id="j5K-Tt-V9p"/>
@@ -43,7 +43,7 @@
                                 <state key="normal" title="En Route !"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Et mieux vaut pas être assis au fond…)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud7-4c-1yt">
-                                <rect key="frame" x="124" y="392" width="172" height="11"/>
+                                <rect key="frame" x="124" y="436" width="172" height="11"/>
                                 <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="9"/>
                                 <color key="textColor" red="0.89411764705882346" green="0.83921568627450982" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,6 +63,7 @@
                             <constraint firstItem="9LG-r3-ppt" firstAttribute="top" secondItem="IFG-x1-17R" secondAttribute="bottom" constant="120" id="vzy-8t-xdY" userLabel="Start Button.top = Home Screen Title.bottom + 100"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fbY-jo-YV3"/>
                     <connections>
                         <outlet property="busImage" destination="Svd-6D-2du" id="mTq-f9-FIi"/>
                         <outlet property="homeBaseline" destination="Ud7-4c-1yt" id="98V-Zc-f0p"/>
@@ -71,6 +72,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="75.815217391304358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7RQ-rK-UZ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S5i-2B-ZR3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o2X-Pw-oOg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dlK-Pn-QrU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WND-TW-jZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75.815217391304358"/>
         </scene>
