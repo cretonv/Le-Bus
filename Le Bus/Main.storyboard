@@ -41,6 +41,9 @@
                                     <constraint firstAttribute="height" constant="49" id="j5K-Tt-V9p"/>
                                 </constraints>
                                 <state key="normal" title="En Route !"/>
+                                <connections>
+                                    <segue destination="52z-XJ-Scf" kind="show" id="cR9-vB-Qsq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Et mieux vaut pas être assis au fond…)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud7-4c-1yt">
                                 <rect key="frame" x="124" y="436" width="172" height="11"/>
@@ -92,6 +95,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WND-TW-jZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75.815217391304358"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="Oxb-Bi-kb9">
+            <objects>
+                <viewController id="52z-XJ-Scf" customClass="PlayerViewController" customModule="Le_Bus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zba-cJ-c7p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0IV-PD-Sez"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VyI-VM-nar"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BnK-EO-FWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="76"/>
         </scene>
     </scenes>
     <resources>

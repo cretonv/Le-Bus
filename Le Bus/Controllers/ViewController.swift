@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         gl.zPosition = 0
         view.layer.addSublayer(gl)
         
+        // Permet de créer le gradient en fond du bouton
         self.startButton.applyGradient(colors: [self.firstButtonColor, self.secondButtonColor])
         
         // Permet de replacer les éléments au dessus du custom background
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         startButton.layer.zPosition = 1
     }
     
+    // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -52,6 +54,7 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    
 
 }
 

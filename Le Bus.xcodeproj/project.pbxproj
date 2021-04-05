@@ -10,6 +10,7 @@
 		A511E37B261B1E2500969F48 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */; };
 		A5489B90261B28E000F4BABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5489B8F261B28E000F4BABB /* Main.storyboard */; };
 		A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */; };
+		A5489B9A261B349E00F4BABB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B99261B349E00F4BABB /* PlayerViewController.swift */; };
 		A57A6B0B26027C030013C28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A6B0A26027C030013C28C /* AppDelegate.swift */; };
 		A57A6B0D26027C030013C28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A6B0C26027C030013C28C /* SceneDelegate.swift */; };
 		A57A6B0F26027C030013C28C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A6B0E26027C030013C28C /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		A5489B8F261B28E000F4BABB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		A5489B99261B349E00F4BABB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A57A6B0726027C030013C28C /* Le Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57A6B0A26027C030013C28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57A6B0C26027C030013C28C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		A5489B9C261B34AD00F4BABB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5489B99261B349E00F4BABB /* PlayerViewController.swift */,
+				A57A6B0E26027C030013C28C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A57A6AFE26027C030013C28C = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +82,10 @@
 		A57A6B0926027C030013C28C /* Le Bus */ = {
 			isa = PBXGroup;
 			children = (
+				A5489B9C261B34AD00F4BABB /* Controllers */,
 				A57A6B1F260285090013C28C /* Helpers */,
 				A57A6B0A26027C030013C28C /* AppDelegate.swift */,
 				A57A6B0C26027C030013C28C /* SceneDelegate.swift */,
-				A57A6B0E26027C030013C28C /* ViewController.swift */,
 				A57A6B1326027C060013C28C /* Assets.xcassets */,
 				A57A6B1526027C060013C28C /* LaunchScreen.storyboard */,
 				A57A6B1826027C060013C28C /* Info.plist */,
@@ -168,6 +179,7 @@
 				A57A6B0D26027C030013C28C /* SceneDelegate.swift in Sources */,
 				A57A6B21260285320013C28C /* ColorExtensions.swift in Sources */,
 				A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */,
+				A5489B9A261B349E00F4BABB /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
