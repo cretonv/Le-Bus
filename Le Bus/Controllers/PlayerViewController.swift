@@ -24,14 +24,6 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
-        // Permet de replacer les éléments au dessus du custom background
-        playerInstructions.layer.zPosition = 1
-        topBar.layer.zPosition = 1
-        cardNbField.layer.zPosition = 1
-        returnBtn.layer.zPosition = 1
-        submitBtn.layer.zPosition = 1
-        busIcon.layer.zPosition = 1
-        
         // Ajoute l'ombre à la top bar
         topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
         topBar.layer.shadowOpacity = 0.26
