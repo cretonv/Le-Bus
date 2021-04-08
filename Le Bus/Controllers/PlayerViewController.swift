@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, UITextFieldDelegate {
     
     var cardNbValue: Int?
     
@@ -62,5 +62,53 @@ class PlayerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func toGameScreen(_ sender: UIButton) {
+        let canGo: Bool = getValue()
+        if canGo {
+            if let value = cardNbValue {
+                DataContainer.sharedInstance.cardsNumber = value
+                performSegue(withIdentifier: "toGame", sender: AnyObject.self)
+            }
+        } else {
+            return
+        }
+    }
+    
+    func getValue() -> Bool {
+        if let cardNb = cardNbField.text {
+            if let cardNbInt = Int(cardNb) {
+                if (cardNbInt >= 100) && (cardNbInt <= 200) {
+                    cardNbValue = cardNbInt
+                    return true
+                } else {
+                    showSimpleAlert()
+                    return false
+                }
+            } else {
+                showSimpleAlert()
+                return false
+            }
+        } else {
+            showSimpleAlert()
+            return false
+        }
+    }
+    
+    /**
+     Simple Alert
+     - Alerte utilisé pour signaler que la valeur entrée ne respecte pas les conditions
+    */
+    func showSimpleAlert() {
+        let alert = UIAlertController(title: "Erreur",
+                                      message: "La valeur rentrée ne respecte pas les condtions ",
+                                      preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }

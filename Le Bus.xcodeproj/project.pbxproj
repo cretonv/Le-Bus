@@ -19,6 +19,7 @@
 		A57A6B1726027C060013C28C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57A6B1526027C060013C28C /* LaunchScreen.storyboard */; };
 		A57A6B21260285320013C28C /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A6B20260285320013C28C /* ColorExtensions.swift */; };
 		A58161BF261F6DE200D7DDF9 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A58161BE261F6DE200D7DDF9 /* Rubik-Regular.ttf */; };
+		A5A280DA261F94F800EC58A5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A280D9261F94F800EC58A5 /* GameViewController.swift */; };
 		A5B9711B261F823900C6D9C7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9711A261F823900C6D9C7 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A57A6B1826027C060013C28C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57A6B20260285320013C28C /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		A58161BE261F6DE200D7DDF9 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		A5A280D9261F94F800EC58A5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A5B9711A261F823900C6D9C7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 			children = (
 				A5489B99261B349E00F4BABB /* PlayerViewController.swift */,
 				A57A6B0E26027C030013C28C /* ViewController.swift */,
+				A5A280D9261F94F800EC58A5 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				A57A6B0B26027C030013C28C /* AppDelegate.swift in Sources */,
 				A50C26C1261CE37100073196 /* DataContainer.swift in Sources */,
 				A57A6B0D26027C030013C28C /* SceneDelegate.swift in Sources */,
+				A5A280DA261F94F800EC58A5 /* GameViewController.swift in Sources */,
 				A5B9711B261F823900C6D9C7 /* UIViewControllerExtension.swift in Sources */,
 				A57A6B21260285320013C28C /* ColorExtensions.swift in Sources */,
 				A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */,
