@@ -9,6 +9,8 @@ import UIKit
 
 class PlayerViewController: UIViewController {
     
+    var cardNbValue: Int?
+    
     @IBOutlet weak var playerInstructions: UILabel!
     @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var cardNbField: UITextField!
@@ -18,6 +20,7 @@ class PlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
         
@@ -60,5 +63,4 @@ class PlayerViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
 }
