@@ -9,6 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    var gl:CAGradientLayer = CAGradientLayer()
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var rightCornerCardValue: UILabel!
@@ -17,10 +18,20 @@ class GameViewController: UIViewController {
     @IBOutlet weak var drawButton: UIButton!
     @IBOutlet weak var rankLabel: UILabel!
     
+    // Couleurs du dégradé du custom background
+    let firstGradientColor = UIColor.rgba(r: 162.0, g: 166.0, b: 180.0, a: 1).cgColor
+    let secondGradientColor = UIColor.rgba(r: 105.0, g: 109.0, b: 125.0, a: 1).cgColor
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Création du custom backgroud avec le dégradé gris
+        gl.frame = self.view.bounds
+        gl.colors = [firstGradientColor, secondGradientColor]
+        gl.zPosition = 0
+        view.layer.addSublayer(gl)
         
         cardView.layer.cornerRadius = 29
         drawButton.layer.cornerRadius = 8
@@ -37,6 +48,12 @@ class GameViewController: UIViewController {
         cardView.layer.shadowOpacity = 0.35
         cardView.layer.shadowOffset = .zero
         cardView.layer.shadowRadius = 10
+        
+        // Définition de l'index de tous les composants à 1
+        cardView.layer.zPosition = 1
+        topBar.layer.zPosition = 1
+        drawButton.layer.zPosition = 1
+        rankLabel.layer.zPosition = 1
         
     }
     
