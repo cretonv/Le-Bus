@@ -211,16 +211,56 @@
         <!--Game View Controller-->
         <scene sceneID="1ma-7e-dnq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOe-Az-O8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="oPd-55-KkG" customClass="GameViewController" customModule="Le_Bus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tR1-jc-V9m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEj-dY-kns">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="acN-8H-YRc">
+                                        <rect key="frame" x="189" y="30" width="36" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="CcZ-p6-bPQ"/>
+                                            <constraint firstAttribute="height" constant="40" id="Tpx-9E-3yB"/>
+                                            <constraint firstAttribute="width" constant="36" id="afL-lv-ffA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="u7G-ob-XeR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-5T-drp">
+                                        <rect key="frame" x="8" y="38" width="24" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="3YS-Uy-QOh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="3bT-Zr-TDi"/>
+                                            <constraint firstAttribute="width" constant="24" id="HE2-vx-jiU"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="Oc9-9o-tex"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="acN-8H-YRc" firstAttribute="centerX" secondItem="bEj-dY-kns" secondAttribute="centerX" id="47M-Wd-GcB"/>
+                                    <constraint firstItem="acN-8H-YRc" firstAttribute="centerX" secondItem="bEj-dY-kns" secondAttribute="centerX" id="BMW-EI-f9l"/>
+                                    <constraint firstItem="acN-8H-YRc" firstAttribute="top" secondItem="bEj-dY-kns" secondAttribute="top" constant="30" id="DtZ-jE-7ff"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="76" id="UCU-yL-YZf"/>
+                                    <constraint firstItem="F4U-5T-drp" firstAttribute="top" secondItem="bEj-dY-kns" secondAttribute="top" constant="38" id="afP-hT-UFw"/>
+                                    <constraint firstItem="F4U-5T-drp" firstAttribute="leading" secondItem="bEj-dY-kns" secondAttribute="leadingMargin" id="bAt-1o-OKV"/>
+                                    <constraint firstAttribute="height" constant="76" id="qfT-G9-3DJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ecs-hL-9ow"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bEj-dY-kns" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" id="XLI-WA-9VG"/>
+                            <constraint firstItem="bEj-dY-kns" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="fqX-Ni-dSl"/>
+                            <constraint firstItem="bEj-dY-kns" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="t8A-wC-ngh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TQr-p9-ovz"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tOe-Az-O8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2597" y="76"/>
         </scene>
