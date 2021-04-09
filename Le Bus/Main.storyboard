@@ -260,19 +260,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-7F-1TZ">
+                                <rect key="frame" x="108.66666666666669" y="220.66666666666663" width="197" height="295"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-vV-fCV">
+                                        <rect key="frame" x="64.999999999999986" y="88.000000000000028" width="67.000000000000014" height="119"/>
+                                        <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="100"/>
+                                        <color key="textColor" red="0.9137254901960784" green="0.70588235294117641" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq6-7m-46P">
+                                        <rect key="frame" x="5" y="0.0" width="37" height="66"/>
+                                        <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="55"/>
+                                        <color key="textColor" red="0.9137254901960784" green="0.70588235294117641" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2Y-Xj-1iv">
+                                        <rect key="frame" x="155" y="229" width="37" height="66"/>
+                                        <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="55"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.70588235290000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="u2Y-Xj-1iv" secondAttribute="bottom" id="04O-U4-2Rr"/>
+                                    <constraint firstItem="YeF-vV-fCV" firstAttribute="centerX" secondItem="2QQ-7F-1TZ" secondAttribute="centerX" id="3rY-bS-xUN"/>
+                                    <constraint firstAttribute="trailing" secondItem="u2Y-Xj-1iv" secondAttribute="trailing" constant="5" id="5m7-fz-Lyn"/>
+                                    <constraint firstItem="mq6-7m-46P" firstAttribute="top" secondItem="2QQ-7F-1TZ" secondAttribute="top" id="DNY-kl-LGY"/>
+                                    <constraint firstAttribute="width" constant="197" id="Y4n-Fb-YBg"/>
+                                    <constraint firstItem="YeF-vV-fCV" firstAttribute="centerY" secondItem="2QQ-7F-1TZ" secondAttribute="centerY" id="esD-Ne-fah"/>
+                                    <constraint firstAttribute="trailing" secondItem="u2Y-Xj-1iv" secondAttribute="trailing" constant="5" id="ih1-06-Ttx"/>
+                                    <constraint firstItem="mq6-7m-46P" firstAttribute="leading" secondItem="2QQ-7F-1TZ" secondAttribute="leading" constant="5" id="s5t-R7-1de"/>
+                                    <constraint firstAttribute="height" constant="295" id="soO-tO-7dQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ecs-hL-9ow"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="Led-l5-PvL"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" id="XLI-WA-9VG"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="fqX-Ni-dSl"/>
+                            <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerY" secondItem="tR1-jc-V9m" secondAttribute="centerY" id="kVf-le-wHg"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="t8A-wC-ngh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TQr-p9-ovz"/>
+                    <connections>
+                        <outlet property="cardView" destination="2QQ-7F-1TZ" id="q6z-gh-JW3"/>
+                        <outlet property="rightCornerCardValue" destination="u2Y-Xj-1iv" id="K9m-vJ-S7x"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2597" y="76"/>
+            <point key="canvasLocation" x="2595.6521739130435" y="75.815217391304358"/>
         </scene>
     </scenes>
     <resources>

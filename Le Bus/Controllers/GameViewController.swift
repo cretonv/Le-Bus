@@ -9,10 +9,16 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var rightCornerCardValue: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        cardView.layer.cornerRadius = 29
+        rightCornerCardValue.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
     }
     
 
