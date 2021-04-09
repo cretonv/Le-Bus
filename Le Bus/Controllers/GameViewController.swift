@@ -55,6 +55,9 @@ class GameViewController: UIViewController {
         drawButton.layer.zPosition = 1
         rankLabel.layer.zPosition = 1
         
+        leftCornerCardValue.text = "D"
+        rightCornerCardValue.text = "D"
+        centerCardValue.text = "D"
     }
     
 
