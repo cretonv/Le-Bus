@@ -296,20 +296,37 @@
                                     <constraint firstAttribute="height" constant="295" id="soO-tO-7dQ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPE-p5-jQe">
+                                <rect key="frame" x="149" y="579.66666666666663" width="116" height="40"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.70588235294117641" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="1UI-AX-6P4"/>
+                                    <constraint firstAttribute="height" constant="40" id="mKI-J0-FoR"/>
+                                </constraints>
+                                <state key="normal" title="Piocher">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ecs-hL-9ow"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="JPE-p5-jQe" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="6ze-6E-5gf"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="Led-l5-PvL"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" id="XLI-WA-9VG"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="fqX-Ni-dSl"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerY" secondItem="tR1-jc-V9m" secondAttribute="centerY" id="kVf-le-wHg"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="t8A-wC-ngh"/>
+                            <constraint firstItem="JPE-p5-jQe" firstAttribute="top" secondItem="2QQ-7F-1TZ" secondAttribute="bottom" constant="64.329999999999998" id="waC-5k-IgV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TQr-p9-ovz"/>
                     <connections>
                         <outlet property="cardView" destination="2QQ-7F-1TZ" id="q6z-gh-JW3"/>
+                        <outlet property="centerCardValue" destination="YeF-vV-fCV" id="6Yj-Ee-2Oa"/>
+                        <outlet property="drawButton" destination="JPE-p5-jQe" id="1AL-xd-qQ4"/>
+                        <outlet property="leftCornerCardValue" destination="mq6-7m-46P" id="WrO-jr-vBW"/>
+                        <outlet property="rankLabel" destination="kpr-XQ-m9M" id="b0K-4H-g7I"/>
                         <outlet property="rightCornerCardValue" destination="u2Y-Xj-1iv" id="K9m-vJ-S7x"/>
                         <outlet property="topBar" destination="bEj-dY-kns" id="gpS-pb-xzH"/>
                     </connections>

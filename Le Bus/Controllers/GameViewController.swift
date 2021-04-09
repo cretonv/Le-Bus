@@ -10,8 +10,12 @@ import UIKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var rightCornerCardValue: UILabel!
     @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var rightCornerCardValue: UILabel!
+    @IBOutlet weak var leftCornerCardValue: UILabel!
+    @IBOutlet weak var centerCardValue: UILabel!
+    @IBOutlet weak var drawButton: UIButton!
+    @IBOutlet weak var rankLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,7 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         cardView.layer.cornerRadius = 29
+        drawButton.layer.cornerRadius = 8
         rightCornerCardValue.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         
         // Ajoute l'ombre à la top bar
@@ -26,6 +31,13 @@ class GameViewController: UIViewController {
         topBar.layer.shadowOpacity = 0.26
         topBar.layer.shadowOffset = .zero
         topBar.layer.shadowRadius = 10
+        
+        // Ajoute l'ombre à la carte
+        cardView.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        cardView.layer.shadowOpacity = 0.35
+        cardView.layer.shadowOffset = .zero
+        cardView.layer.shadowRadius = 10
+        
     }
     
 
