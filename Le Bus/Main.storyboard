@@ -307,6 +307,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-Rr-V1Y">
+                                <rect key="frame" x="380" y="87" width="26" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="2Dw-M0-cxC"/>
+                                    <constraint firstAttribute="height" constant="17" id="a4F-hc-jlI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ecs-hL-9ow"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -314,8 +321,10 @@
                             <constraint firstItem="JPE-p5-jQe" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="6ze-6E-5gf"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="Led-l5-PvL"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" id="XLI-WA-9VG"/>
+                            <constraint firstItem="cAZ-Rr-V1Y" firstAttribute="top" secondItem="bEj-dY-kns" secondAttribute="bottom" constant="11" id="a80-ZG-dqw"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="fqX-Ni-dSl"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerY" secondItem="tR1-jc-V9m" secondAttribute="centerY" id="kVf-le-wHg"/>
+                            <constraint firstItem="Ecs-hL-9ow" firstAttribute="trailing" secondItem="cAZ-Rr-V1Y" secondAttribute="trailing" constant="8" id="oQG-yU-HCj"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="t8A-wC-ngh"/>
                             <constraint firstItem="JPE-p5-jQe" firstAttribute="top" secondItem="2QQ-7F-1TZ" secondAttribute="bottom" constant="64.329999999999998" id="waC-5k-IgV"/>
                         </constraints>
@@ -326,6 +335,7 @@
                         <outlet property="centerCardValue" destination="YeF-vV-fCV" id="6Yj-Ee-2Oa"/>
                         <outlet property="drawButton" destination="JPE-p5-jQe" id="1AL-xd-qQ4"/>
                         <outlet property="leftCornerCardValue" destination="mq6-7m-46P" id="WrO-jr-vBW"/>
+                        <outlet property="navArrow" destination="cAZ-Rr-V1Y" id="ICJ-OS-AhD"/>
                         <outlet property="rankLabel" destination="kpr-XQ-m9M" id="b0K-4H-g7I"/>
                         <outlet property="rightCornerCardValue" destination="u2Y-Xj-1iv" id="K9m-vJ-S7x"/>
                         <outlet property="topBar" destination="bEj-dY-kns" id="gpS-pb-xzH"/>
@@ -338,6 +348,7 @@
     <resources>
         <image name="burger" width="24" height="19"/>
         <image name="bus" width="120" height="126"/>
+        <image name="nav_arrow" width="633.280029296875" height="452.8599853515625"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

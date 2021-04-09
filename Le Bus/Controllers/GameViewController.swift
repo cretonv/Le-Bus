@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var centerCardValue: UILabel!
     @IBOutlet weak var drawButton: UIButton!
     @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var navArrow: UIImageView!
     
     // Couleurs du dégradé du custom background
     let firstGradientColor = UIColor.rgba(r: 162.0, g: 166.0, b: 180.0, a: 1).cgColor
@@ -54,6 +55,7 @@ class GameViewController: UIViewController {
         topBar.layer.zPosition = 1
         drawButton.layer.zPosition = 1
         rankLabel.layer.zPosition = 1
+        navArrow.layer.zPosition = 1
         
         leftCornerCardValue.text = "D"
         rightCornerCardValue.text = "D"
