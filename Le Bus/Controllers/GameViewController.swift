@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var rightCornerCardValue: UILabel!
+    @IBOutlet weak var topBar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,12 @@ class GameViewController: UIViewController {
         
         cardView.layer.cornerRadius = 29
         rightCornerCardValue.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        
+        // Ajoute l'ombre à la top bar
+        topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        topBar.layer.shadowOpacity = 0.26
+        topBar.layer.shadowOffset = .zero
+        topBar.layer.shadowRadius = 10
     }
     
 

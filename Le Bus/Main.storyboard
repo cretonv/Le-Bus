@@ -311,6 +311,7 @@
                     <connections>
                         <outlet property="cardView" destination="2QQ-7F-1TZ" id="q6z-gh-JW3"/>
                         <outlet property="rightCornerCardValue" destination="u2Y-Xj-1iv" id="K9m-vJ-S7x"/>
+                        <outlet property="topBar" destination="bEj-dY-kns" id="gpS-pb-xzH"/>
                     </connections>
                 </viewController>
             </objects>
