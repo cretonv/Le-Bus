@@ -60,6 +60,12 @@ class GameViewController: UIViewController {
         cardView.layer.shadowOffset = .zero
         cardView.layer.shadowRadius = 10
         
+        // Ajoute l'ombre à la sideBar
+        navModal.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        navModal.layer.shadowOpacity = 0.32
+        navModal.layer.shadowOffset = .zero
+        navModal.layer.shadowRadius = 10
+        
         // Définition de l'index de tous les composants à 1
         cardView.layer.zPosition = 1
         topBar.layer.zPosition = 3
