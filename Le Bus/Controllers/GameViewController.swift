@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var navArrow: UIImageView!
     @IBOutlet weak var navModal: UIView!
-    @IBOutlet weak var bidon: UIButton!
+    @IBOutlet weak var reverseNavArrow: UIImageView!
     
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
@@ -34,9 +34,15 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Rendre les images de fleches cliquables
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
-            navArrow.isUserInteractionEnabled = true
-            navArrow.addGestureRecognizer(tapGestureRecognizer)
+        navArrow.isUserInteractionEnabled = true
+        navArrow.addGestureRecognizer(tapGestureRecognizer)
+        
+        let tapGestureRecognizerBis = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
+        reverseNavArrow.isUserInteractionEnabled = true
+        reverseNavArrow.addGestureRecognizer(tapGestureRecognizerBis)
         
         // Création du custom backgroud avec le dégradé gris
         gl.frame = self.view.bounds
@@ -47,6 +53,7 @@ class GameViewController: UIViewController {
         cardView.layer.cornerRadius = 29
         drawButton.layer.cornerRadius = 8
         rightCornerCardValue.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        reverseNavArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         
         // Ajoute l'ombre à la top bar
         topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
@@ -72,15 +79,11 @@ class GameViewController: UIViewController {
         drawButton.layer.zPosition = 1
         rankLabel.layer.zPosition = 1
         navArrow.layer.zPosition = 1
-        bidon.layer.zPosition = 1
         navModal.layer.zPosition = 2
         
         leftCornerCardValue.text = "D"
         rightCornerCardValue.text = "D"
         centerCardValue.text = "D"
-        
-        print(leadingConstraint.constant)
-        print(traillingConstraint.constant)
         
         leadingConstraint.constant += 215
         traillingConstraint.constant += -215
@@ -111,19 +114,6 @@ class GameViewController: UIViewController {
 
     @objc func showMenu(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-
-        // Your action
-        if sideBarIsOpen {
-            leadingConstraint.constant += 215
-            traillingConstraint.constant += -215
-        } else {
-            leadingConstraint.constant += -215
-            traillingConstraint.constant += 215
-        }
-        sideBarIsOpen = !sideBarIsOpen
-    }
-    @IBAction func testSideBar(_ sender: UIButton) {
         if sideBarIsOpen {
             leadingConstraint.constant += 215
             traillingConstraint.constant += -215
