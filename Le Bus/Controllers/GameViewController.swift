@@ -18,15 +18,25 @@ class GameViewController: UIViewController {
     @IBOutlet weak var drawButton: UIButton!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var navArrow: UIImageView!
+    @IBOutlet weak var navModal: UIView!
+    @IBOutlet weak var bidon: UIButton!
+    
+    @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     // Couleurs du dégradé du custom background
     let firstGradientColor = UIColor.rgba(r: 162.0, g: 166.0, b: 180.0, a: 1).cgColor
     let secondGradientColor = UIColor.rgba(r: 105.0, g: 109.0, b: 125.0, a: 1).cgColor
     
+    var sideBarIsOpen: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
+            navArrow.isUserInteractionEnabled = true
+            navArrow.addGestureRecognizer(tapGestureRecognizer)
         
         // Création du custom backgroud avec le dégradé gris
         gl.frame = self.view.bounds
@@ -52,14 +62,23 @@ class GameViewController: UIViewController {
         
         // Définition de l'index de tous les composants à 1
         cardView.layer.zPosition = 1
-        topBar.layer.zPosition = 1
+        topBar.layer.zPosition = 3
         drawButton.layer.zPosition = 1
         rankLabel.layer.zPosition = 1
         navArrow.layer.zPosition = 1
+        bidon.layer.zPosition = 1
+        navModal.layer.zPosition = 2
         
         leftCornerCardValue.text = "D"
         rightCornerCardValue.text = "D"
         centerCardValue.text = "D"
+        
+        print(leadingConstraint.constant)
+        print(traillingConstraint.constant)
+        
+        leadingConstraint.constant += 215
+        traillingConstraint.constant += -215
+        
     }
     
 
@@ -84,4 +103,28 @@ class GameViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    @objc func showMenu(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        // Your action
+        if sideBarIsOpen {
+            leadingConstraint.constant += 215
+            traillingConstraint.constant += -215
+        } else {
+            leadingConstraint.constant += -215
+            traillingConstraint.constant += 215
+        }
+        sideBarIsOpen = !sideBarIsOpen
+    }
+    @IBAction func testSideBar(_ sender: UIButton) {
+        if sideBarIsOpen {
+            leadingConstraint.constant += 215
+            traillingConstraint.constant += -215
+        } else {
+            leadingConstraint.constant += -215
+            traillingConstraint.constant += 215
+        }
+        sideBarIsOpen = !sideBarIsOpen
+    }
 }
