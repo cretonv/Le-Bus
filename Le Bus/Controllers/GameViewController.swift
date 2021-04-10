@@ -125,6 +125,9 @@ class GameViewController: UIViewController {
             leadingConstraint.constant += -215
             traillingConstraint.constant += 215
         }
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
         sideBarIsOpen = !sideBarIsOpen
     }
 }
