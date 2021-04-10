@@ -85,7 +85,7 @@ class GameViewController: UIViewController {
         rightCornerCardValue.text = "D"
         centerCardValue.text = "D"
         
-        leadingConstraint.constant += 215
+        leadingConstraint.constant = UIScreen.main.bounds.width
         traillingConstraint.constant += -215
         
     }
