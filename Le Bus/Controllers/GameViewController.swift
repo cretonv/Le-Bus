@@ -50,6 +50,8 @@ class GameViewController: UIViewController {
     var busParts: Array<UIView>? = nil
     var busWheels: Array<UIView>? = nil
     
+    var waitResult: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -239,5 +241,20 @@ class GameViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
         sideBarIsOpen = !sideBarIsOpen
+    }
+    
+    @IBAction func nextCard(_ sender: UIButton) {
+        let newValue: String = String(Int.random(in: 0..<9))
+        
+        rightCornerCardValue.fadeTransition(0.3)
+        leftCornerCardValue.fadeTransition(0.3)
+        centerCardValue.fadeTransition(0.3)
+        
+        rightCornerCardValue.text = newValue
+        leftCornerCardValue.text = newValue
+        centerCardValue.text = newValue
+        
+        waitResult = true
+        sender.isHidden = true
     }
 }

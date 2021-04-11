@@ -10,6 +10,7 @@
 		A50C26C1261CE37100073196 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C26C0261CE37100073196 /* DataContainer.swift */; };
 		A511E37B261B1E2500969F48 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */; };
 		A528AB132621DF72006A089A /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528AB122621DF72006A089A /* SideBarView.swift */; };
+		A533563F26239D590025F873 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533563E26239D590025F873 /* UIViewExtension.swift */; };
 		A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */; };
 		A5489B9A261B349E00F4BABB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B99261B349E00F4BABB /* PlayerViewController.swift */; };
 		A55A6FA4261F70280047A208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55A6FA3261F70280047A208 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		A50C26C0261CE37100073196 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		A528AB122621DF72006A089A /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		A533563E26239D590025F873 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		A5489B99261B349E00F4BABB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A55A6FA3261F70280047A208 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				A57A6B20260285320013C28C /* ColorExtensions.swift */,
 				A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */,
 				A5B9711A261F823900C6D9C7 /* UIViewControllerExtension.swift */,
+				A533563E26239D590025F873 /* UIViewExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				A57A6B0F26027C030013C28C /* ViewController.swift in Sources */,
 				A57A6B0B26027C030013C28C /* AppDelegate.swift in Sources */,
+				A533563F26239D590025F873 /* UIViewExtension.swift in Sources */,
 				A50C26C1261CE37100073196 /* DataContainer.swift in Sources */,
 				A528AB132621DF72006A089A /* SideBarView.swift in Sources */,
 				A57A6B0D26027C030013C28C /* SceneDelegate.swift in Sources */,
