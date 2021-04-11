@@ -81,6 +81,8 @@ class GameViewController: UIViewController {
         createShadowCard()
         createShadowSidebar()
         createShadowTopBar()
+        
+        initBusValues()
     }
     
 
@@ -203,6 +205,14 @@ class GameViewController: UIViewController {
             }
         }
         return results
+    }
+    
+    func initBusValues() {
+        if let parts = busParts {
+            for busPart in parts {
+                getLabelsInView(view: busPart)[0].text = String(Int.random(in: 1..<9))
+            }
+        }
     }
     
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
