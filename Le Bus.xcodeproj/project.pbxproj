@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A50C26C1261CE37100073196 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C26C0261CE37100073196 /* DataContainer.swift */; };
 		A511E37B261B1E2500969F48 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */; };
+		A528AB132621DF72006A089A /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528AB122621DF72006A089A /* SideBarView.swift */; };
 		A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */; };
 		A5489B9A261B349E00F4BABB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B99261B349E00F4BABB /* PlayerViewController.swift */; };
 		A55A6FA4261F70280047A208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55A6FA3261F70280047A208 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		A50C26C0261CE37100073196 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		A528AB122621DF72006A089A /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		A5489B99261B349E00F4BABB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A55A6FA3261F70280047A208 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		A528AB112621DF27006A089A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				A528AB122621DF72006A089A /* SideBarView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		A5489B9C261B34AD00F4BABB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		A57A6B0926027C030013C28C /* Le Bus */ = {
 			isa = PBXGroup;
 			children = (
+				A528AB112621DF27006A089A /* CustomView */,
 				A50C26BF261CE35300073196 /* Data */,
 				A5489B9C261B34AD00F4BABB /* Controllers */,
 				A57A6B1F260285090013C28C /* Helpers */,
@@ -202,6 +213,7 @@
 				A57A6B0F26027C030013C28C /* ViewController.swift in Sources */,
 				A57A6B0B26027C030013C28C /* AppDelegate.swift in Sources */,
 				A50C26C1261CE37100073196 /* DataContainer.swift in Sources */,
+				A528AB132621DF72006A089A /* SideBarView.swift in Sources */,
 				A57A6B0D26027C030013C28C /* SceneDelegate.swift in Sources */,
 				A5A280DA261F94F800EC58A5 /* GameViewController.swift in Sources */,
 				A5B9711B261F823900C6D9C7 /* UIViewControllerExtension.swift in Sources */,

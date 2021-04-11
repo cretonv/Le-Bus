@@ -21,6 +21,24 @@ class GameViewController: UIViewController {
     @IBOutlet weak var navModal: UIView!
     @IBOutlet weak var reverseNavArrow: UIImageView!
     
+    @IBOutlet weak var busPart0: UIView!
+    @IBOutlet weak var busPart1: UIView!
+    @IBOutlet weak var busPart2: UIView!
+    @IBOutlet weak var busPart3: UIView!
+    @IBOutlet weak var busPart4: UIView!
+    @IBOutlet weak var busPart5: UIView!
+    @IBOutlet weak var busPart6: UIView!
+    @IBOutlet weak var busPart7: UIView!
+    @IBOutlet weak var busPart8: UIView!
+    
+    @IBOutlet weak var busWheels0: UIView!
+    @IBOutlet weak var busWheels1: UIView!
+    @IBOutlet weak var busWheels2: UIView!
+    @IBOutlet weak var busWheels3: UIView!
+    
+    @IBOutlet weak var topBusPart: UIView!
+    @IBOutlet weak var topBusDecoration: UIView!
+    
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
@@ -29,6 +47,8 @@ class GameViewController: UIViewController {
     let secondGradientColor = UIColor.rgba(r: 105.0, g: 109.0, b: 125.0, a: 1).cgColor
     
     var sideBarIsOpen: Bool = false
+    var busParts: Array<UIView>? = nil
+    var busWheels: Array<UIView>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +74,15 @@ class GameViewController: UIViewController {
         drawButton.layer.cornerRadius = 8
         rightCornerCardValue.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         reverseNavArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        
+        busParts = [busPart0, busPart1, busPart2, busPart3, busPart4, busPart5, busPart6, busPart7, busPart8]
+        roundedBusParts()
+        
+        busWheels = [busWheels0, busWheels1, busWheels2, busWheels3]
+        roundedWheels()
+        
+        topBusPart.layer.cornerRadius = 5
+        topBusDecoration.layer.cornerRadius = 4
         
         // Ajoute l'ombre à la top bar
         topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
@@ -100,6 +129,22 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func roundedBusParts() {
+        if let busPartsCollection = busParts {
+            for busPart in busPartsCollection {
+                busPart.layer.cornerRadius = 5
+            }
+        }
+    }
+    
+    func roundedWheels() {
+        if let wheels = busWheels {
+            for singleWheels in wheels {
+                singleWheels.layer.cornerRadius = 4
+            }
+        }
+    }
     
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
