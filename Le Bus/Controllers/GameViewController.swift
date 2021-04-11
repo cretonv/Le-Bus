@@ -190,6 +190,21 @@ class GameViewController: UIViewController {
         navModal.layer.shadowRadius = 10
     }
     
+    /**
+     Permet de récupérer les labels contenus dans une view
+     */
+    func getLabelsInView(view: UIView) -> [UILabel] {
+        var results = [UILabel]()
+        for subview in view.subviews as [UIView] {
+            if let labelView = subview as? UILabel {
+                results += [labelView]
+            } else {
+                results += getLabelsInView(view: subview)
+            }
+        }
+        return results
+    }
+    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
