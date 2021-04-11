@@ -54,21 +54,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        // Rendre les images de fleches cliquables
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
-        navArrow.isUserInteractionEnabled = true
-        navArrow.addGestureRecognizer(tapGestureRecognizer)
-        
-        let tapGestureRecognizerBis = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
-        reverseNavArrow.isUserInteractionEnabled = true
-        reverseNavArrow.addGestureRecognizer(tapGestureRecognizerBis)
-        
-        // Création du custom backgroud avec le dégradé gris
-        gl.frame = self.view.bounds
-        gl.colors = [firstGradientColor, secondGradientColor]
-        gl.zPosition = 0
-        view.layer.addSublayer(gl)
+        makeArrowClickable()
+        createBgGradient()
         
         cardView.layer.cornerRadius = 29
         drawButton.layer.cornerRadius = 8
@@ -84,39 +71,16 @@ class GameViewController: UIViewController {
         topBusPart.layer.cornerRadius = 5
         topBusDecoration.layer.cornerRadius = 4
         
-        // Ajoute l'ombre à la top bar
-        topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
-        topBar.layer.shadowOpacity = 0.26
-        topBar.layer.shadowOffset = .zero
-        topBar.layer.shadowRadius = 10
-        
-        // Ajoute l'ombre à la carte
-        cardView.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
-        cardView.layer.shadowOpacity = 0.35
-        cardView.layer.shadowOffset = .zero
-        cardView.layer.shadowRadius = 10
-        
-        // Ajoute l'ombre à la sideBar
-        navModal.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
-        navModal.layer.shadowOpacity = 0.32
-        navModal.layer.shadowOffset = .zero
-        navModal.layer.shadowRadius = 10
-        
-        // Définition de l'index de tous les composants à 1
-        cardView.layer.zPosition = 1
-        topBar.layer.zPosition = 3
-        drawButton.layer.zPosition = 1
-        rankLabel.layer.zPosition = 1
-        navArrow.layer.zPosition = 1
-        navModal.layer.zPosition = 2
-        
-        leftCornerCardValue.text = "D"
-        rightCornerCardValue.text = "D"
-        centerCardValue.text = "D"
-        
         leadingConstraint.constant = UIScreen.main.bounds.width
         traillingConstraint.constant += -215
         
+        formatCard()
+        
+        putElementsInForeground()
+        
+        createShadowCard()
+        createShadowSidebar()
+        createShadowTopBar()
     }
     
 
@@ -130,6 +94,9 @@ class GameViewController: UIViewController {
     }
     */
     
+    /**
+     Arrondis les 9 parties du bus
+     */
     func roundedBusParts() {
         if let busPartsCollection = busParts {
             for busPart in busPartsCollection {
@@ -138,12 +105,89 @@ class GameViewController: UIViewController {
         }
     }
     
+    /**
+     Arrondis les roues du bus
+     */
     func roundedWheels() {
         if let wheels = busWheels {
             for singleWheels in wheels {
                 singleWheels.layer.cornerRadius = 4
             }
         }
+    }
+    
+    /**
+     Remet tous les éléments au dessus du dégradé de background
+     */
+    func putElementsInForeground() {
+        cardView.layer.zPosition = 1
+        topBar.layer.zPosition = 3
+        drawButton.layer.zPosition = 1
+        rankLabel.layer.zPosition = 1
+        navArrow.layer.zPosition = 1
+        navModal.layer.zPosition = 2
+    }
+    
+    /**
+     Formate le contenus de la carte au défaut
+     */
+    func formatCard() {
+        leftCornerCardValue.text = "D"
+        rightCornerCardValue.text = "D"
+        centerCardValue.text = "D"
+    }
+    
+    /**
+     Rends les flêches de la sidebar
+     */
+    func makeArrowClickable() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
+        navArrow.isUserInteractionEnabled = true
+        navArrow.addGestureRecognizer(tapGestureRecognizer)
+        
+        let tapGestureRecognizerBis = UITapGestureRecognizer(target: self, action: #selector(showMenu(tapGestureRecognizer:)))
+        reverseNavArrow.isUserInteractionEnabled = true
+        reverseNavArrow.addGestureRecognizer(tapGestureRecognizerBis)
+    }
+    
+    /**
+     Créé le custom gradient bacjkground de la view
+     */
+    func createBgGradient() {
+        gl.frame = self.view.bounds
+        gl.colors = [firstGradientColor, secondGradientColor]
+        gl.zPosition = 0
+        view.layer.addSublayer(gl)
+    }
+    
+    /**
+     Créé l'ombre de la topBar
+     */
+    func createShadowTopBar() {
+        topBar.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        topBar.layer.shadowOpacity = 0.26
+        topBar.layer.shadowOffset = .zero
+        topBar.layer.shadowRadius = 10
+    }
+    
+    /**
+     Créé l'ombre de la card
+     */
+    func createShadowCard() {
+        cardView.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        cardView.layer.shadowOpacity = 0.35
+        cardView.layer.shadowOffset = .zero
+        cardView.layer.shadowRadius = 10
+    }
+    
+    /**
+     Créé l'ombre de la sidebar ouverte
+     */
+    func createShadowSidebar() {
+        navModal.layer.shadowColor = UIColor.rgba(r: 0, g: 0, b: 0, a: 1).cgColor
+        navModal.layer.shadowOpacity = 0.32
+        navModal.layer.shadowOffset = .zero
+        navModal.layer.shadowRadius = 10
     }
     
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
