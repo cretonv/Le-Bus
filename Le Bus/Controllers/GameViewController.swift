@@ -155,6 +155,15 @@ class GameViewController: UIViewController {
     }
     
     /**
+     Change la valeur de la carte principale
+     */
+    func changeCardValue(newValue: String) {
+        leftCornerCardValue.text = newValue
+        rightCornerCardValue.text = newValue
+        centerCardValue.text = newValue
+    }
+    
+    /**
      Rends les flêches de la sidebar
      */
     func makeArrowClickable() {
@@ -284,6 +293,10 @@ class GameViewController: UIViewController {
         getLabelsInView(view: busPart)[0].text = newValue
     }
     
+    func findNewCardValue(busPart: UIView) {
+        
+    }
+    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -329,6 +342,9 @@ class GameViewController: UIViewController {
         if let busPart = busParts?[currentRank - 1] {
             changeValueInBusPart(busPart: busPart, newValue: currentCardValue)
         }
+        if let busPart = busParts?[currentRank] {
+            changeCardValue(newValue: getLabelsInView(view: busPart)[0].text ?? "E")
+        }
         changeAllToPassiveColor()
         currentRank = 1
         doOnClickResponseBtn(btnClicked: sender)
@@ -339,6 +355,7 @@ class GameViewController: UIViewController {
         }
         if let busPart = busParts?[currentRank] {
             changeToActiveColor(viewToChange: busPart)
+            changeCardValue(newValue: getLabelsInView(view: busPart)[0].text ?? "E")
         }
         currentRank += 1
         doOnClickResponseBtn(btnClicked: sender)
