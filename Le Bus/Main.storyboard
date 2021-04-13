@@ -650,23 +650,47 @@
                                     <constraint firstItem="8cH-q1-cHb" firstAttribute="leading" secondItem="XQk-2h-dSM" secondAttribute="leading" constant="85" id="xmp-4Q-GX2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v9-5N-n7e">
+                                <rect key="frame" x="114" y="579.66666666666663" width="86" height="40"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.70588235294117641" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="i0c-N7-Xwe"/>
+                                    <constraint firstAttribute="width" constant="86" id="tRT-dM-dPd"/>
+                                </constraints>
+                                <state key="normal" image="Skull">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOD-o1-7tI">
+                                <rect key="frame" x="225" y="579.66666666666663" width="86" height="40"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.70588235290000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="F3d-VU-hUh"/>
+                                    <constraint firstAttribute="height" constant="40" id="H03-hf-UbJ"/>
+                                </constraints>
+                                <state key="normal" image="Ok"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ecs-hL-9ow"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="5v9-5N-n7e" firstAttribute="top" secondItem="JPE-p5-jQe" secondAttribute="top" id="26Z-YA-F7g"/>
                             <constraint firstItem="JPE-p5-jQe" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="6ze-6E-5gf"/>
                             <constraint firstItem="XQk-2h-dSM" firstAttribute="leading" secondItem="tR1-jc-V9m" secondAttribute="leading" constant="199" id="71k-0e-spm"/>
                             <constraint firstItem="kpr-XQ-m9M" firstAttribute="top" secondItem="bEj-dY-kns" secondAttribute="bottom" constant="8" id="DCH-NN-QlB"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="Led-l5-PvL"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" id="XLI-WA-9VG"/>
+                            <constraint firstItem="JOD-o1-7tI" firstAttribute="leading" secondItem="5v9-5N-n7e" secondAttribute="trailing" constant="25" id="Yg9-Pg-d97"/>
                             <constraint firstItem="cAZ-Rr-V1Y" firstAttribute="top" secondItem="bEj-dY-kns" secondAttribute="bottom" constant="11" id="a80-ZG-dqw"/>
                             <constraint firstItem="XQk-2h-dSM" firstAttribute="trailing" secondItem="Ecs-hL-9ow" secondAttribute="trailing" id="ayv-78-gNG"/>
                             <constraint firstItem="XQk-2h-dSM" firstAttribute="bottom" secondItem="Ecs-hL-9ow" secondAttribute="bottom" id="bOV-t6-YkW"/>
+                            <constraint firstItem="JOD-o1-7tI" firstAttribute="centerY" secondItem="JPE-p5-jQe" secondAttribute="centerY" id="fNv-HP-t4a"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" id="fqX-Ni-dSl"/>
                             <constraint firstItem="XQk-2h-dSM" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="g3V-MB-fcS"/>
                             <constraint firstItem="kpr-XQ-m9M" firstAttribute="leading" secondItem="Ecs-hL-9ow" secondAttribute="leading" constant="9.3333333333333357" id="gFD-Ya-0R6"/>
                             <constraint firstItem="2QQ-7F-1TZ" firstAttribute="centerY" secondItem="tR1-jc-V9m" secondAttribute="centerY" id="kVf-le-wHg"/>
                             <constraint firstItem="Ecs-hL-9ow" firstAttribute="trailing" secondItem="cAZ-Rr-V1Y" secondAttribute="trailing" constant="8" id="oQG-yU-HCj"/>
+                            <constraint firstItem="5v9-5N-n7e" firstAttribute="centerX" secondItem="tR1-jc-V9m" secondAttribute="centerX" constant="-50" id="pzR-Eh-oFD"/>
                             <constraint firstItem="kpr-XQ-m9M" firstAttribute="centerY" secondItem="cAZ-Rr-V1Y" secondAttribute="centerY" id="qyQ-GI-39H"/>
                             <constraint firstItem="XQk-2h-dSM" firstAttribute="bottom" secondItem="Ecs-hL-9ow" secondAttribute="bottom" id="t6x-Xj-bYQ"/>
                             <constraint firstItem="bEj-dY-kns" firstAttribute="top" secondItem="tR1-jc-V9m" secondAttribute="top" id="t8A-wC-ngh"/>
@@ -694,6 +718,7 @@
                         <outlet property="drawButton" destination="JPE-p5-jQe" id="1AL-xd-qQ4"/>
                         <outlet property="leadingConstraint" destination="71k-0e-spm" id="6fW-pT-Acy"/>
                         <outlet property="leftCornerCardValue" destination="mq6-7m-46P" id="WrO-jr-vBW"/>
+                        <outlet property="loseBtn" destination="5v9-5N-n7e" id="BSZ-yE-KJ5"/>
                         <outlet property="navArrow" destination="cAZ-Rr-V1Y" id="ICJ-OS-AhD"/>
                         <outlet property="navModal" destination="XQk-2h-dSM" id="dF6-Ue-ucg"/>
                         <outlet property="rankLabel" destination="kpr-XQ-m9M" id="b0K-4H-g7I"/>
@@ -703,6 +728,7 @@
                         <outlet property="topBusDecoration" destination="09v-cm-ZsR" id="7MS-bi-GNz"/>
                         <outlet property="topBusPart" destination="gvL-l2-FO6" id="9ei-bs-Ti7"/>
                         <outlet property="traillingConstraint" destination="ayv-78-gNG" id="xkc-HQ-NtJ"/>
+                        <outlet property="winBtn" destination="JOD-o1-7tI" id="ex3-4d-ala"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOe-Az-O8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -711,6 +737,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ok" width="680.40997314453125" height="1105.6600341796875"/>
+        <image name="Skull" width="708" height="800.3499755859375"/>
         <image name="burger" width="24" height="19"/>
         <image name="bus" width="120" height="126"/>
         <image name="nav_arrow" width="633.280029296875" height="452.8599853515625"/>

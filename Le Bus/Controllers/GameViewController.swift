@@ -39,6 +39,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var topBusPart: UIView!
     @IBOutlet weak var topBusDecoration: UIView!
     
+    @IBOutlet weak var loseBtn: UIButton!
+    @IBOutlet weak var winBtn: UIButton!
+    
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
@@ -69,6 +72,10 @@ class GameViewController: UIViewController {
         
         busWheels = [busWheels0, busWheels1, busWheels2, busWheels3]
         roundedWheels()
+        
+        
+        initResponseBtnStyle(btn: loseBtn)
+        initResponseBtnStyle(btn: winBtn)
         
         topBusPart.layer.cornerRadius = 5
         topBusDecoration.layer.cornerRadius = 4
@@ -130,6 +137,8 @@ class GameViewController: UIViewController {
         rankLabel.layer.zPosition = 1
         navArrow.layer.zPosition = 1
         navModal.layer.zPosition = 2
+        loseBtn.layer.zPosition = 1
+        winBtn.layer.zPosition = 1
     }
     
     /**
@@ -217,6 +226,16 @@ class GameViewController: UIViewController {
         }
     }
     
+    /**
+     Fonction permettant d'initialiser les styles custom des boutons réponses
+     */
+    func initResponseBtnStyle(btn: UIButton) {
+        btn.imageView?.contentMode = .scaleAspectFit
+        btn.isHidden = true
+        btn.layer.cornerRadius = 8
+        btn.contentEdgeInsets = UIEdgeInsets(top: 5,left: 0,bottom: 5,right: 0)
+    }
+    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -256,5 +275,7 @@ class GameViewController: UIViewController {
         
         waitResult = true
         sender.isHidden = true
+        loseBtn.isHidden = false
+        winBtn.isHidden = false
     }
 }
