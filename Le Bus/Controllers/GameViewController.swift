@@ -260,10 +260,18 @@ class GameViewController: UIViewController {
     func changeAllToPassiveColor() {
         if let parts = busParts {
             for i in 1...(parts.count - 1) {
-                getLabelsInView(view: parts[i])[0].textColor = UIColor.rgba(r: 228.0, g: 214.0, b: 167.0, a: 1.0)
+                changeToPassiveColor(viewToChange: parts[i])
             }
         }
     }
+    
+    /**
+    Fonction permettant de changer la  couleur d'un label en passibe
+     */
+    func changeToPassiveColor(viewToChange: UIView) {
+        getLabelsInView(view: viewToChange)[0].textColor = UIColor.rgba(r: 228.0, g: 214.0, b: 167.0, a: 1.0)
+    }
+    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
