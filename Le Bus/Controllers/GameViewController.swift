@@ -266,10 +266,17 @@ class GameViewController: UIViewController {
     }
     
     /**
-    Fonction permettant de changer la  couleur d'un label en passibe
+    Fonction permettant de changer la  couleur d'un label en passive
      */
     func changeToPassiveColor(viewToChange: UIView) {
         getLabelsInView(view: viewToChange)[0].textColor = UIColor.rgba(r: 228.0, g: 214.0, b: 167.0, a: 1.0)
+    }
+    
+    /**
+    Fonction permettant de changer la  couleur d'un label en passive
+     */
+    func changeToActiveColor(viewToChange: UIView) {
+        getLabelsInView(view: viewToChange)[0].textColor = .white
     }
     
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
@@ -314,10 +321,14 @@ class GameViewController: UIViewController {
         changeVisibilityResponseBtn()
     }
     @IBAction func touchLoseButton(_ sender: UIButton) {
+        changeAllToPassiveColor()
         currentRank = 1
         doOnClickResponseBtn(btnClicked: sender)
     }
     @IBAction func touchWinButton(_ sender: UIButton) {
+        if let busPart = busParts?[currentRank] {
+            changeToActiveColor(viewToChange: busPart)
+        }
         currentRank += 1
         doOnClickResponseBtn(btnClicked: sender)
     }
