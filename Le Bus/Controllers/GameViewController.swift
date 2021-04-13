@@ -55,6 +55,7 @@ class GameViewController: UIViewController {
     
     var waitResult: Bool = false
     var currentRank: Int = 1
+    var currentCardValue: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -279,6 +280,10 @@ class GameViewController: UIViewController {
         getLabelsInView(view: viewToChange)[0].textColor = .white
     }
     
+    func changeValueInBusPart(busPart: UIView, newValue: String) {
+        getLabelsInView(view: busPart)[0].text = newValue
+    }
+    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -307,7 +312,7 @@ class GameViewController: UIViewController {
     
     @IBAction func nextCard(_ sender: UIButton) {
         let newValue: String = String(Int.random(in: 0..<9))
-        
+        currentCardValue = newValue
         rightCornerCardValue.fadeTransition(0.3)
         leftCornerCardValue.fadeTransition(0.3)
         centerCardValue.fadeTransition(0.3)
@@ -321,11 +326,17 @@ class GameViewController: UIViewController {
         changeVisibilityResponseBtn()
     }
     @IBAction func touchLoseButton(_ sender: UIButton) {
+        if let busPart = busParts?[currentRank - 1] {
+            changeValueInBusPart(busPart: busPart, newValue: currentCardValue)
+        }
         changeAllToPassiveColor()
         currentRank = 1
         doOnClickResponseBtn(btnClicked: sender)
     }
     @IBAction func touchWinButton(_ sender: UIButton) {
+        if let busPartToChange = busParts?[currentRank - 1]  {
+            changeValueInBusPart(busPart: busPartToChange, newValue: currentCardValue)
+        }
         if let busPart = busParts?[currentRank] {
             changeToActiveColor(viewToChange: busPart)
         }
