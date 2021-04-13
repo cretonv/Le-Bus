@@ -86,8 +86,6 @@ class GameViewController: UIViewController {
         leadingConstraint.constant = UIScreen.main.bounds.width
         traillingConstraint.constant += -215
         
-        formatCard()
-        
         putElementsInForeground()
         
         createShadowCard()
@@ -96,6 +94,7 @@ class GameViewController: UIViewController {
         
         initBusValues()
         updateRank()
+        formatCard()
     }
     
 
@@ -149,9 +148,9 @@ class GameViewController: UIViewController {
      Formate le contenus de la carte au défaut
      */
     func formatCard() {
-        leftCornerCardValue.text = "D"
-        rightCornerCardValue.text = "D"
-        centerCardValue.text = "D"
+        if let busPart = busParts?[0] {
+            changeCardValue(newValue: getLabelsInView(view: busPart)[0].text ?? "E")
+        }
     }
     
     /**
@@ -293,10 +292,6 @@ class GameViewController: UIViewController {
         getLabelsInView(view: busPart)[0].text = newValue
     }
     
-    func findNewCardValue(busPart: UIView) {
-        
-    }
-    
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -342,7 +337,7 @@ class GameViewController: UIViewController {
         if let busPart = busParts?[currentRank - 1] {
             changeValueInBusPart(busPart: busPart, newValue: currentCardValue)
         }
-        if let busPart = busParts?[currentRank] {
+        if let busPart = busParts?[0] {
             changeCardValue(newValue: getLabelsInView(view: busPart)[0].text ?? "E")
         }
         changeAllToPassiveColor()
