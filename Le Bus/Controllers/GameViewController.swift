@@ -74,6 +74,7 @@ class GameViewController: UIViewController {
         busWheels = [busWheels0, busWheels1, busWheels2, busWheels3]
         roundedWheels()
         
+        changeAllToPassiveColor()
         
         initResponseBtnStyle(btn: loseBtn)
         initResponseBtnStyle(btn: winBtn)
@@ -251,6 +252,17 @@ class GameViewController: UIViewController {
     
     func updateRank() {
         rankLabel.text = "Rang " + String(currentRank) + "/9"
+    }
+    
+    /**
+     Fonction permettant de rendre tout les labels du bus sauf le premier en couleur inactive
+     */
+    func changeAllToPassiveColor() {
+        if let parts = busParts {
+            for i in 1...(parts.count - 1) {
+                getLabelsInView(view: parts[i])[0].textColor = UIColor.rgba(r: 228.0, g: 214.0, b: 167.0, a: 1.0)
+            }
+        }
     }
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
