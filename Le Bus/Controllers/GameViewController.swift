@@ -236,6 +236,15 @@ class GameViewController: UIViewController {
         btn.contentEdgeInsets = UIEdgeInsets(top: 5,left: 0,bottom: 5,right: 0)
     }
     
+    func doOnClickResponseBtn(btnClicked: UIButton) {
+        changeVisibilityResponseBtn()
+        drawButton.isHidden = false
+    }
+    
+    func changeVisibilityResponseBtn() {
+        loseBtn.isHidden = !loseBtn.isHidden
+        winBtn.isHidden = !winBtn.isHidden
+    }
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -275,7 +284,12 @@ class GameViewController: UIViewController {
         
         waitResult = true
         sender.isHidden = true
-        loseBtn.isHidden = false
-        winBtn.isHidden = false
+        changeVisibilityResponseBtn()
+    }
+    @IBAction func touchLoseButton(_ sender: UIButton) {
+        doOnClickResponseBtn(btnClicked: sender)
+    }
+    @IBAction func touchWinButton(_ sender: UIButton) {
+        doOnClickResponseBtn(btnClicked: sender)
     }
 }
