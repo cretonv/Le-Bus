@@ -54,6 +54,7 @@ class GameViewController: UIViewController {
     var busWheels: Array<UIView>? = nil
     
     var waitResult: Bool = false
+    var currentRank: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +93,7 @@ class GameViewController: UIViewController {
         createShadowTopBar()
         
         initBusValues()
+        updateRank()
     }
     
 
@@ -239,11 +241,16 @@ class GameViewController: UIViewController {
     func doOnClickResponseBtn(btnClicked: UIButton) {
         changeVisibilityResponseBtn()
         drawButton.isHidden = false
+        updateRank()
     }
     
     func changeVisibilityResponseBtn() {
         loseBtn.isHidden = !loseBtn.isHidden
         winBtn.isHidden = !winBtn.isHidden
+    }
+    
+    func updateRank() {
+        rankLabel.text = "Rang " + String(currentRank) + "/9"
     }
     // Les 2 fonctions suivantes vont nous permettre de faire disparaitre la navigation bar quand cette vue est affichée
     override func viewWillAppear(_ animated: Bool) {
@@ -287,9 +294,11 @@ class GameViewController: UIViewController {
         changeVisibilityResponseBtn()
     }
     @IBAction func touchLoseButton(_ sender: UIButton) {
+        currentRank = 1
         doOnClickResponseBtn(btnClicked: sender)
     }
     @IBAction func touchWinButton(_ sender: UIButton) {
+        currentRank += 1
         doOnClickResponseBtn(btnClicked: sender)
     }
 }
