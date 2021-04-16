@@ -53,6 +53,7 @@ class GameViewController: UIViewController {
     var busParts: Array<UIView>? = nil
     var busWheels: Array<UIView>? = nil
     
+    var numberOfCards: Int = 1
     var waitResult: Bool = false
     var currentRank: Int = 1
     var currentCardValue: String = ""
@@ -176,7 +177,7 @@ class GameViewController: UIViewController {
     }
     
     /**
-     Créé le custom gradient bacjkground de la view
+     Créé le custom gradient background de la view
      */
     func createBgGradient() {
         gl.frame = self.view.bounds
@@ -319,6 +320,11 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func nextCard(_ sender: UIButton) {
+        if DataContainer.sharedInstance.cardsNumber == numberOfCards {
+            print("DÉFAITE")
+            return
+        }
+        numberOfCards += 1
         let newValue: String = String(Int.random(in: 0..<9))
         currentCardValue = newValue
         rightCornerCardValue.fadeTransition(0.3)
@@ -345,6 +351,10 @@ class GameViewController: UIViewController {
         doOnClickResponseBtn(btnClicked: sender)
     }
     @IBAction func touchWinButton(_ sender: UIButton) {
+        if currentRank == 9 {
+            print("VICTOIRE")
+            return
+        }
         if let busPartToChange = busParts?[currentRank - 1]  {
             changeValueInBusPart(busPart: busPartToChange, newValue: currentCardValue)
         }
