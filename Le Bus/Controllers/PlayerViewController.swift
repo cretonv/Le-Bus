@@ -17,6 +17,7 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var returnBtn: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var busIcon: UIImageView!
+    @IBOutlet weak var burgerIcon: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
         
         returnBtn.layer.cornerRadius = 8
         submitBtn.layer.cornerRadius = 8
+        
+        let tapGestureRecognizerForMenu = UITapGestureRecognizer(target: self, action: #selector(showScreenMenu(tapGestureRecognizer:)))
+        burgerIcon.isUserInteractionEnabled = true
+        burgerIcon.addGestureRecognizer(tapGestureRecognizerForMenu)
     }
     
 
@@ -103,4 +108,10 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @objc func showScreenMenu(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        performSegue(withIdentifier: "showMenu", sender: AnyObject.self)
+    }
+
 }
