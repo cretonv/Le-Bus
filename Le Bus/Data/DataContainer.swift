@@ -17,6 +17,7 @@ import Foundation
 public class DataContainer {
     public static let sharedInstance = DataContainer()
     var cardsNumber: Int?
+    var isWin: Bool = true
 
     private init() {
     // L'initialisation est privé pour être sur qu'une seule instance sera créé

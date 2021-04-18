@@ -10,6 +10,7 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var gl:CAGradientLayer = CAGradientLayer()
+    var isWin: Bool? = nil
     
     @IBOutlet weak var resultTitle: UILabel!
     @IBOutlet weak var resultSubTitleQuote: UILabel!
@@ -17,6 +18,11 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var sipQuote: UILabel!
     @IBOutlet weak var kdoQuote: UILabel!
     @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var returnHomeBtn: UIButton!
+    
+    // Couleurs du dégradé du bouton return
+    let firstButtonColor = UIColor.rgba(r: 233, g: 180, b: 78, a: 1).cgColor
+    let secondButtonColor = UIColor.rgba(r: 249, g: 137, b: 0, a: 1).cgColor
     
     // Couleurs du dégradé du custom background
     let firstGradientColor = UIColor.rgba(r: 162.0, g: 166.0, b: 180.0, a: 1).cgColor
@@ -28,6 +34,16 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
         createBgGradient()
         putElementsInForeground()
+        
+        if(DataContainer.sharedInstance.isWin) {
+            resultSubTitleQuote.text = "Attention à la punition pour le dernier donneur"
+            sipNumber.text = String(Int.random(in: 0...22))
+        } else {
+            sipNumber.text = String(Int.random(in: 0...12))
+        }
+        
+        // Permet de créer le gradient en fond du bouton
+        self.returnHomeBtn.applyGradient(colors: [self.firstButtonColor, self.secondButtonColor])
     }
     
     /**
@@ -50,6 +66,8 @@ class ResultViewController: UIViewController {
         sipNumber.layer.zPosition = 1
         sipQuote.layer.zPosition = 1
         kdoQuote.layer.zPosition = 1
+        returnHomeBtn.layer.zPosition = 1
+        
     }
     
     /*

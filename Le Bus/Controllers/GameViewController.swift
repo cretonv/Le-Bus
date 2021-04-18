@@ -45,6 +45,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
+    var isWin: Bool = true
+    
     // Couleurs du dégradé du custom background
     let firstGradientColor = UIColor.rgba(r: 162.0, g: 166.0, b: 180.0, a: 1).cgColor
     let secondGradientColor = UIColor.rgba(r: 105.0, g: 109.0, b: 125.0, a: 1).cgColor
@@ -303,7 +305,7 @@ class GameViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
     @objc func showMenu(tapGestureRecognizer: UITapGestureRecognizer)
     {
         if sideBarIsOpen {
@@ -321,7 +323,7 @@ class GameViewController: UIViewController {
     
     @IBAction func nextCard(_ sender: UIButton) {
         if DataContainer.sharedInstance.cardsNumber == numberOfCards {
-            print("DÉFAITE")
+            DataContainer.sharedInstance.isWin = false
             performSegue(withIdentifier: "toResultScreen", sender: AnyObject.self)
             return
         }
