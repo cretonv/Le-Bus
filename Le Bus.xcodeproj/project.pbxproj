@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A50C26C1261CE37100073196 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C26C0261CE37100073196 /* DataContainer.swift */; };
 		A511E37B261B1E2500969F48 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */; };
+		A51B1774262CA6DC00B3CF9E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B1773262CA6DC00B3CF9E /* ResultViewController.swift */; };
 		A528AB132621DF72006A089A /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528AB122621DF72006A089A /* SideBarView.swift */; };
 		A533563F26239D590025F873 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533563E26239D590025F873 /* UIViewExtension.swift */; };
 		A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		A50C26C0261CE37100073196 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		A511E37A261B1E2500969F48 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		A51B1773262CA6DC00B3CF9E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		A528AB122621DF72006A089A /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		A533563E26239D590025F873 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A5489B92261B2B3700F4BABB /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				A5489B99261B349E00F4BABB /* PlayerViewController.swift */,
 				A57A6B0E26027C030013C28C /* ViewController.swift */,
 				A5A280D9261F94F800EC58A5 /* GameViewController.swift */,
+				A51B1773262CA6DC00B3CF9E /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				A57A6B21260285320013C28C /* ColorExtensions.swift in Sources */,
 				A5489B93261B2B3700F4BABB /* ButtonExtensions.swift in Sources */,
 				A5489B9A261B349E00F4BABB /* PlayerViewController.swift in Sources */,
+				A51B1774262CA6DC00B3CF9E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

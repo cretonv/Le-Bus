@@ -322,6 +322,7 @@ class GameViewController: UIViewController {
     @IBAction func nextCard(_ sender: UIButton) {
         if DataContainer.sharedInstance.cardsNumber == numberOfCards {
             print("DÉFAITE")
+            performSegue(withIdentifier: "toResultScreen", sender: AnyObject.self)
             return
         }
         numberOfCards += 1
@@ -353,6 +354,7 @@ class GameViewController: UIViewController {
     @IBAction func touchWinButton(_ sender: UIButton) {
         if currentRank == 9 {
             print("VICTOIRE")
+            performSegue(withIdentifier: "toResultScreen", sender: AnyObject.self)
             return
         }
         if let busPartToChange = busParts?[currentRank - 1]  {
