@@ -830,6 +830,7 @@
         <!--Result View Controller-->
         <scene sceneID="Ose-ms-dnI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsw-GD-2c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="GDS-gt-oMe" customClass="ResultViewController" customModule="Le_Bus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcI-0j-fdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
@@ -946,13 +947,12 @@
                         <outlet property="topBar" destination="wyq-YA-W7d" id="FN6-cO-4We"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsw-GD-2c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3346" y="76"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DHE-BV-R4T"/>
+        <segue reference="cR9-vB-Qsq"/>
         <segue reference="qa0-Gs-NgL"/>
     </inferredMetricsTieBreakers>
     <resources>
