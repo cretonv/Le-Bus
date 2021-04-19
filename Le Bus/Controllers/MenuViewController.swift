@@ -10,6 +10,7 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var menuHelpBtn: UIButton!
+    @IBOutlet weak var burgerBtn: UIImageView!
     
     // Couleurs du dégradé du bouton help
     let firstButtonColor = UIColor.rgba(r: 233, g: 180, b: 78, a: 1).cgColor
@@ -20,8 +21,13 @@ class MenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.menuHelpBtn.applyGradient(colors: [self.firstButtonColor, self.secondButtonColor])
+        
+        
+        let tapGestureRecognizerForGoBack = UITapGestureRecognizer(target: self, action: #selector(goPreviousView(tapGestureRecognizer:)))
+        burgerBtn.isUserInteractionEnabled = true
+        burgerBtn.addGestureRecognizer(tapGestureRecognizerForGoBack)
+        
     }
-    
 
     /*
     // MARK: - Navigation
@@ -42,6 +48,10 @@ class MenuViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @objc func goPreviousView(tapGestureRecognizer: UITapGestureRecognizer) {
+        _ = navigationController?.popViewController(animated: true)
     }
 
 }

@@ -253,6 +253,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cbb-Pr-kg9"/>
                     <connections>
+                        <outlet property="burgerBtn" destination="LPw-Dw-kii" id="y5l-Bz-HuJ"/>
                         <outlet property="menuHelpBtn" destination="Kww-SW-EgJ" id="lOH-2B-n0M"/>
                     </connections>
                 </viewController>
@@ -927,7 +928,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RxK-vP-Vgj"/>
+        <segue reference="dh0-vQ-Que"/>
         <segue reference="DHE-BV-R4T"/>
         <segue reference="qa0-Gs-NgL"/>
     </inferredMetricsTieBreakers>
