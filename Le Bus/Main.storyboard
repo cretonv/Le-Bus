@@ -233,33 +233,53 @@
                                     <constraint firstAttribute="width" constant="24" id="m6W-RI-UP6"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-SW-EgJ">
-                                <rect key="frame" x="20" y="72" width="136" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-Uq-XOy">
+                                <rect key="frame" x="20" y="78" width="136" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="5bV-eT-me4"/>
-                                    <constraint firstAttribute="width" constant="136" id="EaK-bL-x8U"/>
+                                    <constraint firstAttribute="height" constant="49" id="Rm8-n7-VH3"/>
+                                    <constraint firstAttribute="width" constant="136" id="pzx-IE-DFM"/>
                                 </constraints>
-                                <state key="normal" title="AIDE DE JEU"/>
+                                <state key="normal" title="AIDE DE JEU">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qN5-dl-Vsc" kind="presentation" id="yOr-yt-8YX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UV5-zl-Sf2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LPw-Dw-kii" firstAttribute="leading" secondItem="UV5-zl-Sf2" secondAttribute="leading" constant="20" id="35t-QV-KZS"/>
+                            <constraint firstItem="tdG-Uq-XOy" firstAttribute="leading" secondItem="UV5-zl-Sf2" secondAttribute="leading" constant="20" id="4SF-4L-zHp"/>
+                            <constraint firstItem="tdG-Uq-XOy" firstAttribute="top" secondItem="LPw-Dw-kii" secondAttribute="bottom" constant="39" id="4r0-Qb-OrC"/>
                             <constraint firstItem="LPw-Dw-kii" firstAttribute="top" secondItem="UV5-zl-Sf2" secondAttribute="top" constant="20" id="UW2-fC-7pf"/>
-                            <constraint firstItem="Kww-SW-EgJ" firstAttribute="leading" secondItem="UV5-zl-Sf2" secondAttribute="leading" constant="20" id="aly-YH-sF4"/>
-                            <constraint firstItem="Kww-SW-EgJ" firstAttribute="top" secondItem="LPw-Dw-kii" secondAttribute="bottom" constant="33" id="eoT-H2-yWf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cbb-Pr-kg9"/>
                     <connections>
                         <outlet property="burgerBtn" destination="LPw-Dw-kii" id="y5l-Bz-HuJ"/>
-                        <outlet property="menuHelpBtn" destination="Kww-SW-EgJ" id="lOH-2B-n0M"/>
+                        <outlet property="menuHelpBtn" destination="tdG-Uq-XOy" id="ZSu-4X-8Kb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUQ-pF-oC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2594" y="-695"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="At0-Qq-cCb">
+            <objects>
+                <viewController id="qN5-dl-Vsc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DMM-7W-uKi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gBx-oB-KXn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oz0-te-Jkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3345" y="-695"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="1ma-7e-dnq">

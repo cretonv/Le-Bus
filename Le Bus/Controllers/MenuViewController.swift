@@ -21,6 +21,8 @@ class MenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.menuHelpBtn.applyGradient(colors: [self.firstButtonColor, self.secondButtonColor])
+        self.menuHelpBtn.layer.sublayers?[0].cornerRadius = 4
+        self.menuHelpBtn.setTitleColor(UIColor.black, for: .normal)
         
         
         let tapGestureRecognizerForGoBack = UITapGestureRecognizer(target: self, action: #selector(goPreviousView(tapGestureRecognizer:)))
