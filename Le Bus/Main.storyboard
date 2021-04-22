@@ -246,6 +246,13 @@
                                     <segue destination="qN5-dl-Vsc" kind="presentation" id="yOr-yt-8YX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="v0.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAw-cH-4Uz">
+                                <rect key="frame" x="20" y="675" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-SemiBold" family="Rubik" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UV5-zl-Sf2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -264,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUQ-pF-oC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594" y="-695"/>
+            <point key="canvasLocation" x="2592.753623188406" y="-695.38043478260875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="At0-Qq-cCb">
@@ -284,7 +291,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIy-iT-9iX">
                                 <rect key="frame" x="38" y="209" width="338" height="487"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Ce jeu se joue en 1v1, mode duel. Les joueurs se mettent d'accord sur le nombre de carte à aligner (autobus) mais aussi du nombre de carte composant le paquet.   Le jeu est composé de carte avec des valeurs allant de 1 à 8, La part de présence de ses cartes dans le paquet d'une partie à l'autre est variable en fonction d'une intervalle.  Enfin, le perdant prends donc un cul sec plus des gorgés supplémentaires définis aléatoirement. Les joueurs peuvent aussi définir de ne pas prendre le cul sec et de prendre seulement les gorgés.</mutableString>
+                                <string key="text">Ce jeu se joue en 1v1, mode duel. Les joueurs se mettent d'accord sur le nombre de carte à aligner (autobus) mais aussi du nombre de carte composant le paquet.   Le jeu est composé de carte avec des valeurs allant de 1 à 8, La part de présence de ses cartes dans le paquet d'une partie à l'autre est variable en fonction d'une intervalle.  Enfin, le perdant prends donc un cul sec plus des gorgés supplémentaires définis aléatoirement. Les joueurs peuvent aussi définir de ne pas prendre le cul sec et de prendre seulement les gorgés.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -830,7 +837,6 @@
         <!--Result View Controller-->
         <scene sceneID="Ose-ms-dnI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsw-GD-2c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="GDS-gt-oMe" customClass="ResultViewController" customModule="Le_Bus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcI-0j-fdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
@@ -947,6 +953,7 @@
                         <outlet property="topBar" destination="wyq-YA-W7d" id="FN6-cO-4We"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsw-GD-2c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3346" y="76"/>
         </scene>
